@@ -1,0 +1,298 @@
+body {
+  margin: 0;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+.titulo{
+
+
+
+  margin-bottom: 50px;
+
+
+}
+
+
+
+.boton{
+
+  margin-left:30px;
+
+  margin-top: 30px;
+
+  padding: 0px 75px;
+}
+
+.boton-editar{
+
+
+
+
+
+}
+
+
+
+
+
+.titulo{
+
+font-size: 2em;
+
+  font-style: normal;
+
+  color: white;
+
+
+
+}
+
+
+
+.imagen{
+
+
+
+
+
+
+  border-radius: 50px;
+  position: absolute;
+  top:  490px;
+  right: 5px;
+
+width:  400px; 
+  height: 400px;
+
+ 
+}
+
+
+
+@media (min-width: 800px) {
+  .imagen {
+
+  
+    border-radius: 50px;
+    position: absolute;
+    top: 13rem;
+    right: 5px;
+
+  width:  400px; 
+    height: 400px;
+   
+  }
+}
+
+.table{
+
+  margin-top: 120px;
+
+}
+
+.editar{
+
+  margin-right: 20px;
+
+}
+
+.center{
+
+  text-align: center;
+ 
+  margin-top: 15px;
+
+  color: white;
+
+ 
+
+}
+.centrar{
+
+  display: block;
+}
+
+tr{
+
+  margin-right: 100px;
+
+}
+
+
+
+.bebida{
+
+
+  padding-left: 200px;
+
+  margin-left: 50px;
+
+
+
+}
+
+.precio{
+
+
+  
+
+
+}
+
+.centrado{
+
+
+
+
+
+}
+
+.nombreCentrado{
+
+  color: aqua;
+
+}
+
+.precio{
+
+  text-align: center;
+
+    color: darkgreen;
+
+    margin-left: 90px;
+
+    background-position: c;
+
+
+}
+
+
+
+.error{
+
+  text-align: center;
+
+  font-weight: bold;
+
+  margin-top: 60px;
+
+  padding: 6px;
+
+  background-color: red;
+  color: white;
+  font-style: normal;
+
+}
+
+
+
+
+@media (max-width: 800px) {
+  .boton {
+
+   
+    color: yellow;
+    margin-left: 20px;
+
+    margin-top: 10px;
+  
+    padding: 0px 60px;
+
+  
+
+  }
+}
+
+@media (min-width: 800px) {
+  .asociados {
+
+   
+    color:aqua;
+   
+  }
+}
+
+
+.asociados{
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .color{
+
+  background-color:#ff4081  ;
+
+  padding: 1px;
+  
+
+}
+
+.titulo{
+
+  text-align: center;
+
+  margin-top: 1px;
+
+
+}
+
+a{
+
+  color: aqua;
+
+  display: flex;
+
+  justify-content: space-between;
+
+}
+
+.nombre{
+
+  text-align: center;
+
+}
+
+.boton{
+
+
+
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+
+  margin-right: 20px;
+
+  padding-left: 30px;
+
+
+
+} */

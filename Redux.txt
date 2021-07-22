@@ -1,0 +1,21 @@
+
+
+
+
+Para instalar redux y sus componentes colocamos : npm i react-redux redux redux-thunk
+
+
+De donde : 
+
+-Redux : es la libreria de redux 
+
+-react-redux : react redux es la que tiene funciones para conectar nuestra aplicacion de create-react-app a redux
+
+
+-  redux-thunk : es una forma de utilizar funciones asincronas en redux 
+
+
+
+para crear una api json-server o una fake json-server : se coloca el comando npx json-server db.json --port 4000
+
+de donde db.json es el archivo json con la apì que creamos 
