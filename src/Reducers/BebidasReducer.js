@@ -15,7 +15,8 @@ import {
 
     OBTENER_PRODUCTO_ELIMINAR,
     PRODUCTO_ELIMINAR_EXITO,
-    PRODUCTO_ELIMINADO_ERROR
+    PRODUCTO_ELIMINADO_ERROR,
+    OBTENER_PRODUCTO_EDITAR
 
 
 
@@ -33,6 +34,7 @@ const initialState = { // en el inialstate siempre nos detenemos a pensar las pr
     error: false, // el error va a inicar como null o false 
     loading : false, // ´por si la api tarda un poco en descargar los productos ya que una vez que comenzamos a hacer la consulta cambia a true y mostramos un texto o spinner de cargando¿
     BebidaEliminar : false,
+    productoeditar : false,
 
 }
 
@@ -159,7 +161,16 @@ export default function(state =  initialState , action){  // si se le pasa un st
 
             }
 
+            case OBTENER_PRODUCTO_EDITAR:
 
+                return{
+
+                    ...state,
+                    productoeditar: action.payload
+
+
+
+                }
 
 
 

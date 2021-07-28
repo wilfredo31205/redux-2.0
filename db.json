@@ -1,11 +1,6 @@
 {
   "productos": [
     {
-      "nombre": "wilfredo",
-      "precio": 325,
-      "id": "0102"
-    },
-    {
       "nombre": "presidenta",
       "precio": 1500,
       "id": "325"
@@ -29,6 +24,21 @@
       "nombre": "santa",
       "precio": 204,
       "id": "0078"
+    },
+    {
+      "nombre": "ohy",
+      "precio": 350,
+      "id": "45214"
+    },
+    {
+      "nombre": "ggfdsg",
+      "precio": 250,
+      "id": "65"
+    },
+    {
+      "nombre": "dfdb",
+      "precio": 185,
+      "id": "1453"
     }
   ]
 }

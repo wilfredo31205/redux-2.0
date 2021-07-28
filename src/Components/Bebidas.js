@@ -1,24 +1,99 @@
 
 
 
-import React,{useEffect} from 'react';
+import React,{useEffect, useState} from 'react';
 import NuevoProducto from './NuevoProductos';
 
 import Swal  from 'sweetalert2';
 
 import { useDispatch } from 'react-redux';
 
-import { borrarProductoAction } from '../actions/BebidasAction';
+import { borrarProductoAction, obtenerProductoEditar } from '../actions/BebidasAction';
+
+
+
+import Staburck from '../images/staburck.gif';
+
+
+
+// cModal
+import Modal from '@material-ui/core/Modal'; // importando el componente de Modal
+import { makeStyles } from '@material-ui/core/styles';  /// Importando los stilos del modal 
+import Formulario from './Formulario';
+
+import { useHistory } from 'react-router-dom'
+
+
+
+function getModalStyle() { // ESTILOS DE POSICION 
+  const top = 50 ; // DEFINIENDO LA UBICACION DEL MODA 
+  const left = 50;
+
+  return {        
+    top: `${top}%`,
+    left: `${left}%`,
+    transform: `translate(-${top}%, -${left}%)`,
+  };
+}
+
+const useStyles = makeStyles(theme => ({ // ESTILOS DE CSS 
+  paper: {
+    position: 'absolute',
+    width: 800,
+    height: 400,
+    backgroundColor: theme.palette.background.paper,
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+  },
+}));
+
+
+
 
 
 
 
 const Bebidas = ({bebidas}) => {
 
+    // CONFIGURACION DEL MODAL DE MATERIAL - UI
+
+    const [ modalStyle ] = useState(getModalStyle);
+
+    const [ open  , setOpen ] = useState(false) // state para abrir y cerrar el modal
+
+
+    const classes = useStyles()
+
+
+    const handleOpen = ()=>{
+
+
+        setOpen(true); // cuando se ejecute esta funcion llamada handleOpen se va a abrir el modal 
+
+
+    }
+
+
+
+    const handleClose  = ()=>{
+
+
+      setOpen(false); // cuando se cierre el modal 
+
+
+
+
+  }
+
+
+
+
     const { nombre , precio , id} = bebidas
 
 
     const dispatch = useDispatch();
+
+    const history = useHistory(); // habilitar history para redireccionar
 
 
     // Confirmar si el usuario desea eliminarlo 
@@ -71,6 +146,16 @@ const Bebidas = ({bebidas}) => {
 
 
 
+    const redireccionarEdicion =  producto =>{
+
+      history.push(`/productos/editar/${producto.id}`)
+
+
+
+    }
+
+
+
 
 
 
@@ -92,24 +177,92 @@ const Bebidas = ({bebidas}) => {
 
         <td>
 
-<button className="btn waves-effect waves-light editar amber accent-4 "
+    <button className="btn waves-effect waves-light editar amber accent-4 "
+    onClick={ ()=>handleOpen()}
+    type="submit"name="action">Editar
 
-type="submit"name="action">Editar
-<i class="material-icons right">create</i>
-</button>
+    <i class="material-icons right">create</i>
+    </button>
+
+<Modal
+
+// este modal es un componente y require que le pasemos ciertas configuracion 
 
 
-<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+      open={open} // diciendole si va a estar abierto o no 
 
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <h4>Modal Header</h4>
-    <p>A bunch of text</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-  </div>
-</div>
+      onClose={()=>{ // para cerrar el modal 
+
+        handleClose();  
+
+
+      }}
+      
+
+
+>
+
+    <div style={modalStyle} className={classes.paper}>
+    <h4 className="animate__animated animate__zoomInDown ">Edicion de bebidas</h4>
+
+    <img src={Staburck } className="imagen" alt="imagenfondo" />
+ 
+   
+    <div class="row">
+
+
+    <form class="col s10">
+
+    <div class="row">
+
+
+
+    <div class="input-field col s4">
+
+
+    <input placeholder="Ej: Wisky" id="first_name" type="text" class="validate"></input>
+
+    <label for="first_name">Nombre Bebida</label>
+
+    </div>
+    <div class="input-field col s4">
+          <input id="last_name" type="number" class="validate" placeholder="Ej: 500"></input>
+          <label for="last_name">Precio</label>
+        </div>
+
+
+
+    </div>
+
+
+    <button class="btn waves-effect waves-light" 
+    onClick={()=>redireccionarEdicion(bebidas)}
+    type="button"
+     name="action">Editar
+     
+    <i class="material-icons right">send</i>
+  </button>
+
+          
+ 
+
+    </form>
+
+
+
+
+
+    </div>
+
+
+
+
+
+    </div>
+
+
+
+</Modal>
 
 
 

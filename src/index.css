@@ -72,13 +72,13 @@ font-size: 2em;
 
 
 
-  border-radius: 50px;
+  border-radius: 60px;
   position: absolute;
-  top:  490px;
+  top:  60px;
   right: 5px;
 
-width:  400px; 
-  height: 400px;
+width:  260px; 
+  height: 300px;
 
  
 }
@@ -89,13 +89,13 @@ width:  400px;
   .imagen {
 
   
-    border-radius: 50px;
+    /* border-radius: 50px;
     position: absolute;
     top: 13rem;
     right: 5px;
 
   width:  400px; 
-    height: 400px;
+    height: 400px; */
    
   }
 }
